@@ -9,7 +9,7 @@ import (
 
 func main() {
 	nodes := []filesys.Node{
-		{"localhost", 8000},
+		{"localhost", 8000}, {"localhost", 8001},
 	}
 
 	fs := filesys.NewSimpleDistributedFileSystem(nodes)
