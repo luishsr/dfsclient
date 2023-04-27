@@ -3,14 +3,16 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/luishsr/filesys"
 )
 
 func main() {
-	nodes := []Node{
+	nodes := []filesys.Node{
 		{"localhost", 8000},
 	}
 
-	fs := NewSimpleDistributedFileSystem(nodes)
+	fs := filesys.NewSimpleDistributedFileSystem(nodes)
 
 	// Upload a file
 	testFile, err := os.Open("test.txt")
